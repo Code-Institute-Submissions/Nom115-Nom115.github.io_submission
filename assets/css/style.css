@@ -3,3 +3,20 @@ body {
     color: greenyellow;
     font-family: monospace;
 }
+
+
+@media only screen and (max-width: 425px){
+    .header_text {
+        font-size: xx-small;
+    }
+}
+@media only screen and (min-width: 426px){
+    .header_text {
+        font-size: large;
+    }
+}
+
+.header_text:hover{
+    text-decoration: underline;
+    color: greenyellow;
+}
