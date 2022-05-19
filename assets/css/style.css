@@ -34,3 +34,13 @@ body {
 #c1_resize {
     max-width: 100%;
 }
+
+#oled_prev{
+    background-color: orange;
+    color: black;
+}
+
+#oled_next{
+    background-color: orange;
+    color:black;
+}
