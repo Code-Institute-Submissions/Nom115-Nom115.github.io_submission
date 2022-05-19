@@ -44,3 +44,17 @@ body {
     background-color: orange;
     color:black;
 }
+
+#qled_prev{
+    background-color: orange;
+    color: black;
+}
+
+#qled_next{
+    background-color: orange;
+    color:black;
+}
+
+#qn94_resize {
+    max-width: 100%;
+}
