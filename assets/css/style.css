@@ -58,3 +58,18 @@ body {
 #qn94_resize {
     max-width: 100%;
 }
+
+#quiz{
+    background-color: white;
+    color:black;
+}
+
+.quiz_btn{
+    background-color: orange;
+}
+
+.quiz_actions{
+    max-width: 50%;
+    background-color:yellow;
+    border: 2px solid black;
+}
