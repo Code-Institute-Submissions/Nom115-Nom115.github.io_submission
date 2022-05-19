@@ -24,3 +24,13 @@ body {
 #main_header{
     padding-top: 30px;
 }
+
+.oled_class {
+    background-color: white;
+    color:black;
+
+}
+
+#c1_resize {
+    max-width: 100%;
+}
