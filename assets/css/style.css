@@ -1,3 +1,5 @@
+@import  "~/tabulator-tables/dist/css/tabulator.min.css";
+
 body {
     background-color: black;
     color: greenyellow;
@@ -74,3 +76,5 @@ body {
     background-color:yellow;
     border: 2px solid black;
 }
+
+
