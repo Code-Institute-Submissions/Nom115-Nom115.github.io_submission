@@ -1,3 +1,5 @@
+console.log("Hello World")
+
 //Moving forwards and backwards for OLED panel
 var oled_counter = 0;
 function oled_page_counter_positive() {
@@ -77,3 +79,5 @@ const qled_prev = document.getElementById("qled_prev");
 qled_prev.addEventListener('click', function handleclick(){
     qled_page_counter_negative();
     })
+
+

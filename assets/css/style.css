@@ -66,6 +66,7 @@ body {
 
 .quiz_btn{
     background-color: orange;
+    border: 2px solid black;
 }
 
 .quiz_actions{
