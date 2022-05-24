@@ -1,8 +1,7 @@
 //define data
 var tabledata = [
-    {id:1, name:"Samsung", Model:"QN90B", gender:"male", height:95, col:"red", dob:"14/05/2010"},
-    {id:2, name:"Jenny Jane", age:42, gender:"female", height:142, col:"blue", dob:"30/07/1954"},
-    {id:3, name:"Steve McAlistaire", age:35, gender:"male", height:176, col:"green", dob:"04/11/1982"},
+    {id:1, name:"Samsung", model:"QN90A", price:1299, links:"https://www.amazon.co.uk/Neo-QLED-QE55QN90A-2000-Smart/dp/B091FGV8TF/ref=sr_1_1?crid=3T9J7CEW4OC2K&keywords=Samsung+QN90A+55&qid=1653434376&sprefix=samsung+qn90a+55%2Caps%2C67&sr=8-1"},
+    
 ];
 
 //create Tabulator on DOM element with id "example-table"
@@ -11,14 +10,12 @@ var table = new Tabulator("#example-table", {
     data:tabledata, //assign data to table
     layout:"fitColumns", //fit columns to width of table (optional)
     columns:[ //Define Table Columns
-        {title:"Manufacturer", field:"name", width:150},
-        {title:"Model", field:"Model"},
-        {title:"Favourite Color", field:"col"},
-        {title:"Date Of Birth", field:"dob", sorter:"date", hozAlign:"center"},
+        {title:"Manufacturer", field:"name"},
+        {title:"Model", field:"model"},
+        {title:"RRP (£)", field:"price"},
+        {title:"Amazon Link", field:"links", formatter:"link", formatterParams:{
+            label:"Amazon",
+            target:"_blank",
+        }},
     ],
-});
-
-//trigger an alert message when the row is clicked
-table.on("rowClick", function(e, row){ 
-   alert("Row " + row.getData().id + " Clicked!!!!");
 });
