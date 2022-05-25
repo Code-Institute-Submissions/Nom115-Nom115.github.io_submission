@@ -13,6 +13,14 @@ var tabledata = [
     {id:10, name:"Samsung", model:"Q60A", price:699, links:"https://www.amazon.co.uk/Samsung-55Q60A-139-7-Ultra-Smart/dp/B092R8XYR9/ref=sr_1_3?crid=168GJHP7F6TJF&keywords=Q60A+55&qid=1653485844&s=electronics&sprefix=q60a+55%2Celectronics%2C64&sr=1-3"},
 
     //LG TVs
+    {id:1, name:"LG", model:"C1 OLED", price:1299, links:"https://www.amazon.co.uk/LG-OLED55C14LB-Advanced-processor-Assistant/dp/B08X3QYNT5/ref=sr_1_1?crid=2VI0A737B1LE4&keywords=LG%2BC1%2B55&qid=1653486946&s=electronics&sprefix=lg%2Bc1%2B55%2Celectronics%2C74&sr=1-1&th=1"},
+    {id:2, name:"LG", model:"B1 OLED", price:999, links:"https://www.amazon.co.uk/LG-OLED55B16LA-processor-SELF-LIT-Assistant/dp/B08X3R8XMC/ref=sr_1_3?crid=1SWI98EJTRVX&keywords=LG%2BB1%2B55&qid=1653486995&s=electronics&sprefix=lg%2Bb%2Celectronics%2C61&sr=1-3&th=1"},
+    {id:3, name:"LG", model:"A1 OLED", price:899, links:"https://www.amazon.co.uk/LG-Inch-OLED-Ultra-Smart/dp/B095P9B15P/ref=sr_1_4?crid=NPTU5G80W3BA&keywords=LG+A1+55&qid=1653487090&s=electronics&sprefix=lg+a%2Celectronics%2C68&sr=1-4"},
+    {id:4, name:"LG", model:"G1 OLED", price:1599, links:"https://www.amazon.co.uk/LG-OLED55G16LA-Ultra-Freeview-Freesat/dp/B0946Y4S59/ref=sr_1_3?crid=133Y7IGIL6W46&keywords=LG+G1+55&qid=1653487113&s=electronics&sprefix=lg+g%2Celectronics%2C66&sr=1-3"},
+    {id:5, name:"LG", model:'Z1 8K OLED (77")', price:19999, links:"https://www.lg.com/uk/tvs/lg-oled77z19la"},
+    {id:6, name:"LG", model:"NANO90", price:849, links:"https://www.amazon.co.uk/LG-55NANO916PA-NanoCell-processor-Assistant/dp/B08X3R2YR6/ref=sr_1_1?crid=2KPOB940HJGH0&keywords=LG%2BNANO90%2B55&qid=1653487309&s=electronics&sprefix=lg%2Bnano90%2B55%2Celectronics%2C66&sr=1-1&th=1"},
+    {id:7, name:"LG", model:"UP81", price:499, links:"https://www.amazon.co.uk/LG-55UP81006LA-Freeview-Assistant-compatible/dp/B08X3PLQDX/ref=sr_1_5?crid=9GOTYIR2TNE6&keywords=LG%2BUP7000%2B55%22&qid=1653487357&s=electronics&sprefix=lg%2Bup7000%2B55%2B%2Celectronics%2C53&sr=1-5&th=1"},
+    {id:8, name:"LG", model:"NANO86", price:699, links:"https://www.amazon.co.uk/55NANO886PB-55-NanoCell-Ultra-Smart/dp/B094KQKD5M/ref=sr_1_2?crid=2TCWRE5FQ73YP&keywords=lg+nano+75+55%22&qid=1653487399&s=electronics&sprefix=lg+nano75%2Celectronics%2C55&sr=1-2"},
     
 
     
