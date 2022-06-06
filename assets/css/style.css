@@ -64,12 +64,13 @@ body {
 #quiz{
     background-color: white;
     color:black;
+    visibility: hidden;
 }
 
 .quiz_btn{
     background-color: orange;
     border: 2px solid black;
-    visibility: hidden;
+
 }
 
 #start_btn{
@@ -84,16 +85,9 @@ body {
     max-width: 50%;
     background-color:yellow;
     border: 2px solid black;
-    visibility: hidden;
+
 }
 
-#question_name{
-    visibility: hidden;
-}
-
-#question{
-    visibility: hidden;
-}
 
 .table{
     color:green;
