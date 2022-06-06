@@ -7,9 +7,8 @@ var userStats =	[
                     0,	//size
                     0, 	//price
                     0, 	//OLED
-                    0, 	//QLED 
-                    0, 	//silly 
-                    0 	//cool 
+                    0, 	//QLED
+                    0, //Wall mounting
                 ];
 
 var tempStats = userStats; //Holds stat increases relating to user selection
@@ -20,11 +19,11 @@ var tempStats = userStats; //Holds stat increases relating to user selection
 
 var questionText =	[															
                         "What size TV do you need?", 	//q1
-                        "It's snack time. What are you eating?", 					//q2
-                        "What TV show did you most look forward to after school?", 	//q3
-                        "What toy could you not put down growing up?", 				//q4
-                        "What did you listen to in the 90s/early 00s?", 			//q5
-                        "What was your go to computer program at school?" 			//q6
+                        "What price?", 					//q2
+                        "Are there many windows in the room?", 	//q3
+                        "Are there blackouts", 				//q4
+                        "Are you building the TV around the room?", 			//q5
+                        "Are you wall mounting?" 			//q6
                     ];
 
 //The following array contains all answer text elements for each question
@@ -38,12 +37,11 @@ var answerText =	[		//question 1 answers
                             '85"'],							
                             
                             //question 2 answers
-                        [	"Yowie", 							
-                            "Curly Wurlys and Chomps",
-                            "Mamee Noodles",
-                            "Fruit",
-                            "Sunnyboys",
-                            "Fruit rollups"],
+                        [	"£500-£650", 							
+                            "£651-£750",
+                            "£751-£900",
+                            "£1000+",
+                            ],
                             
                             //question 3 answers
                         [	"Round the Twist", 
