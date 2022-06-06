@@ -69,12 +69,29 @@ body {
 .quiz_btn{
     background-color: orange;
     border: 2px solid black;
+    display:none;
+}
+
+#start_btn{
+    background-color: orange;
+    border: 2px solid black;
+    max-width: 50%;
+    margin: auto;
 }
 
 .quiz_actions{
     max-width: 50%;
     background-color:yellow;
     border: 2px solid black;
+    display:none;
+}
+
+#question_name{
+    display:none;
+}
+
+#question{
+    display:none;
 }
 
 .table{
