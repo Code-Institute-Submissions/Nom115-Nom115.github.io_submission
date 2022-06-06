@@ -22,7 +22,7 @@ var questionText =	[
                         "What price?", 					//q2
                         "Are there many windows in the room?", 	//q3
                         "Are there blackouts", 				//q4
-                        "Are you building the TV around the room?", 			//q5
+                        "Are you building the room around the TV?", 			//q5
                         "Are you wall mounting?" 			//q6
                     ];
 
@@ -44,92 +44,66 @@ var answerText =	[		//question 1 answers
                             ],
                             
                             //question 3 answers
-                        [	"Round the Twist", 
-                            "Rugrats",
-                            "Neighbours",
-                            "Are You Afraid of the Dark?",
-                            "Rocko's Modern Life",
-                            "Art Attack"],
+                        [	"0", 
+                            "1",
+                            "2",
+                            "3+",
+                            ],
                             
                             //question 4 answers
-                        [	"Cabbage Patch Doll", 
-                            "Rubix Cube",
-                            "Slime",
-                            "Hot Wheels",
-                            "Mighty Max/Polly Pocket",
-                            "Tamagotchi"],
+                        [	"Yes", 
+                            "No",
+                        ],
                             
                             //question 5 answers
-                        [	"Spice Girls",
-                             "I didn't listen to music", 
-                            "rage",
-                            "Backstreet Boys",
-                             "The sweet sound of dial up",
-                            "So Fresh CDs"],		
+                        [	"Yes",
+                             "No", 
+                            ],		
 
                             //question 6 answers								
-                        [	"Kid Pix", 
-                            "Minesweeper",
-                            "Lemmings",
-                            "Zoombinis",
-                            "Microsoft Paint",
-                            "Pinball"]
+                        [	"Yes", 
+                            "No",
+                        ]
                     ]
 
 //The following array contains all personality stat increments for each answer of every question
 
 var answerValues =	[		//question 1 answer values
-                        [	[3,0,1,0,2,0], 		
-                            [0,0,0,1,2,3],		
-                            [0,3,0,2,1,0],
-                            [0,2,0,3,0,1],
-                            [2,1,3,0,0,0],
-                            [1,0,2,0,3,0] 
+                        [	[1,0,0,1,0], 		
+                            [2,0,0,1,0],		
+                            [3,1,1,1,0],
+                            [4,2,2,2,0],
+                            [5,3,3,3,0],
+                            [6,4,4,4,3] 
                         ],	
                     
                             //question 2 answer values
-                        [	[0,3,0,2,0,1], 
-                            [2,0,0,0,3,1],
-                            [0,2,0,0,1,3],
-                             [2,0,3,1,0,0],
-                            [1,0,0,3,2,0],
-                            [3,0,1,0,2,0] 
+                        [	[0,1,0,2,0], 
+                            [0,2,1,2,0],
+                            [0,3,2,2,0],
+                             [0,4,3,2,0],
                         ],
 
                             //question 3 answer values
-                        [	[0,1,0,0,3,2], 
-                            [3,0,2,0,1,0],
-                            [1,0,3,0,2,0],
-                             [0,3,0,1,2,0],
-                            [0,0,0,2,1,3],
-                            [0,0,0,3,1,2] 
+                        [	[0,0,3,1,0], 
+                            [0,0,1,3,0],
+                            [0,0,1,4,0],
+                             [0,0,0,5,0],
                         ],
                             
                             //question 4 answer values
-                        [	[2,0,3,0,1,0], 
-                            [0,1,0,3,0,2],
-                            [0,3,2,0,0,1],
-                             [0,0,0,2,1,3],
-                            [2,0,0,0,3,1],
-                            [3,0,0,2,1,0] 
+                        [	[0,0,3,1,0], 
+                            [0,0,1,3,0],
                         ],
                             
                             //question 5 answer values
-                        [	[3,0,0,0,2,1], 
-                            [0,2,3,1,0,0],
-                            [0,0,0,2,1,3],
-                             [1,3,0,0,0,2],
-                            [0,0,0,3,2,1],
-                            [1,0,2,0,3,0] 
+                        [	[4,0,3,1,0], 
+                            [0,0,1,3,0],
                         ],
                             
                             //question 6 answer values
-                        [	[1,0,0,3,2,0], 
-                            [0,3,0,2,0,1],
-                            [3,1,0,0,0,2],
-                             [1,0,0,2,3,0],
-                            [0,0,3,2,1,0],
-                            [0,0,1,2,0,3] 
+                        [	[0,0,0,0,5], 
+                            [0,0,0,0,0],
                         ]
                     ]
 
