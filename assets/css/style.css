@@ -69,7 +69,7 @@ body {
 .quiz_btn{
     background-color: orange;
     border: 2px solid black;
-    display:none;
+    visibility: hidden;
 }
 
 #start_btn{
@@ -77,21 +77,22 @@ body {
     border: 2px solid black;
     max-width: 50%;
     margin: auto;
+    visibility: visible;
 }
 
 .quiz_actions{
     max-width: 50%;
     background-color:yellow;
     border: 2px solid black;
-    display:none;
+    visibility: hidden;
 }
 
 #question_name{
-    display:none;
+    visibility: hidden;
 }
 
 #question{
-    display:none;
+    visibility: hidden;
 }
 
 .table{
