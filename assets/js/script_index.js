@@ -4,7 +4,7 @@ const questionContainer = document.getElementById('quiz')
 const questionName = document.getElementById('question_name')
 const question = document.getElementById('question')
 const answerButtons = document.getElementById('answer_buttons')
-const next = document.getElementById('next_btn')
+
 var userStats = [
         0, //size 1-6
         0, //price 1-5
@@ -21,22 +21,22 @@ startButtonElement.addEventListener("click", function startQuizEvent() {
     console.log("success")
 })
 //create button function
-//function createButton(innerTxt) {
-   //var div = document.createElement('div');
-   //div.classList.add('row', 'p-1');
-   //const button = document.createElement('button');
-   //button.classList.add('btn', 'quiz_btn');
-   //button.innerText = innerTxt
-   //div.appendChild(button)
-   //answerButtons.appendChild(div)
+function createButton(innerTxt) {
+   var div = document.createElement('div');
+   div.classList.add('row', 'p-1');
+   const button = document.createElement('button');
+   button.classList.add('btn', 'quiz_btn');
+   button.innerText = innerTxt
+   div.appendChild(button)
+   answerButtons.appendChild(div)
    
-//}
+}
 
 //show question function
-//function showQuestion1(qs) {
-    //createButton('43"')
+function showQuestion1(qs) {
+    createButton('43"')
 
-//}
+}
 
 //reset state
 function resetState() {
@@ -48,21 +48,21 @@ function resetState() {
 
 let question_number = 0
 //next question
-//next.addEventListener("click", function() {
-    //buttonPressed()
-    //resetState()
-    //question_number++
-    //console.log(question_number)
-    //if (question_number === 1) {
-    //    showQuestion2()
-    //} else if (question_number === 2){
-    //    showQuestion3()
-    //} else if (question_number === 3){
-    //    showQuestion4()
-    //} else if (question_number === 4){
-    //    showQuestion5()
-    //}
-//})
+next.addEventListener("click", function() {
+    buttonPressed()
+    resetState()
+    question_number++
+    console.log(question_number)
+    if (question_number === 1) {
+        showQuestion2()
+    } else if (question_number === 2){
+        showQuestion3()
+    } else if (question_number === 3){
+        showQuestion4()
+    } else if (question_number === 4){
+        showQuestion5()
+    }
+})
 
 //questions array
 
