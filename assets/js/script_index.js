@@ -20,14 +20,28 @@ startButtonElement.addEventListener("click", function startQuizEvent() {
     questionContainer.style.visibility = 'visible';
     questionArray(answer_one)
     console.log("success")
+    console.log(questionNumber)
 })
 
 let questionNumber = 0
 //iterate through question array
 function questionArray(answer) {
+    if (questionNumber === 0) {
+        answer = answer_one;
+        questionName.innerText = "Question 1";
+        question.innerText = some_questions[0];
+    } else if (questionNumber === 1) {
+        answer = answer_two;
+    } else if (questionNumber === 2) {
+        answer = answer_three;
+    } else if (questionNumber === 3) {
+        answer = answer_four;
+    }
     for (let key in answer){
         createButton(answer[key]);
     }
+    
+    questionNumber++
 }
 //create button function
 function createButton(innerTxt) {
@@ -60,10 +74,10 @@ const some_questions = ['What size TV do you need?',
 'Is there sun glare?',]
 
 //answer
-const answer_one = {"a": '43"', "b": '50"', "c": '55"', "d": '65"', "e": '75"', "f": '85"'}
-
-
-
+const answer_one = {"a": '43"', "b": '50"', "c": '55"', "d": '65"', "e": '75"', "f": '85"',}
+const answer_two = {"a": "£500-£650", "b": "£651-£800", "c": "£800-£1100", "d": "£1100+",}
+const answer_three = {"a": "1", "b": "2", "c": "3", "d": "3+",}
+const answer_four = {"a": 'yes', "b": 'no',}
 
 const questions_array = [
     {question: 'What size TV do you need?',
