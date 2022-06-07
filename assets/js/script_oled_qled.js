@@ -6,10 +6,10 @@ function oled_page_counter_positive() {
     oled_counter++;
     console.log(oled_counter)
     if (oled_counter == 1) {
-        document.getElementById("oled_page").innerHTML = "test";
+        document.getElementById("oled_page").innerHTML = "The pros of being able to turn on and off each pixel is the obvious nature of deep blacks and near infinite contrast. This, in addition to the OLED's great colour reproduction and excellent response time, makes most OLED TV's great for gaming or movies";
         console.log("success")
     } else if (oled_counter == 2) {
-        document.getElementById("oled_page").innerHTML = "test2";
+        document.getElementById("oled_page").innerHTML = "The cons of the OLED are lower peak brightness, higher price and high reflections. Due to the nature of the OLED panel not having a backlight, the overall peak brightness is very low, and combo-ed with the glass screen, allows for a lot of reflections and glare. Due to the manufacturing process, the OLED does come out at a higher cost.";
     } else if (oled_counter > 2){
         oled_counter = 2;
     }
@@ -22,9 +22,9 @@ function oled_page_counter_negative() {
         document.getElementById("oled_page").innerHTML = "The OLED patent is owned by LG, and they are the first company to produce to White OLED commercially. The OLEDS thrive under dark conditions and give unparalleled black levels due to the nature of self lit pixels, where each pixel can be individually turned on and off. This makes it one of the most competitive TV technologies out there.";
         console.log("success")
     } else if (oled_counter == 1) {
-        document.getElementById("oled_page").innerHTML = "test";
+        document.getElementById("oled_page").innerHTML = "The pros of being able to turn on and off each pixel is the obvious nature of deep blacks and near infinite contrast. This, in addition to the OLED's great colour reproduction and excellent response time, makes most OLED TV's great for gaming or movies";
     } else if (oled_counter == 2){
-        document.getElementById("oled_page").innerHTML = "test2";
+        document.getElementById("oled_page").innerHTML = "The cons of the OLED are lower peak brightness, higher price and high reflections. Due to the nature of the OLED panel not having a backlight, the overall peak brightness is very low, and combo-ed with the glass screen, allows for a lot of reflections and glare. Due to the manufacturing process, the OLED does come out at a higher cost.";
     } else if (oled_counter < 0){
         oled_counter = 0;
     }
