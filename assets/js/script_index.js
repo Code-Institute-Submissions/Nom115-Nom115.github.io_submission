@@ -18,8 +18,17 @@ var userStats = [
 startButtonElement.addEventListener("click", function startQuizEvent() {
     startButtonElement.style.visibility = 'hidden';
     questionContainer.style.visibility = 'visible';
+    questionArray()
     console.log("success")
 })
+
+const questionNumber = 0
+//iterate through question array
+function questionArray() {
+    Object.entries(questions_array).forEach(([key, value]) => {
+        createButton(value)
+    })
+}
 //create button function
 function createButton(innerTxt) {
    var div = document.createElement('div');
@@ -46,23 +55,8 @@ function resetState() {
 }
 
 
-let question_number = 0
-//next question
-next.addEventListener("click", function() {
-    buttonPressed()
-    resetState()
-    question_number++
-    console.log(question_number)
-    if (question_number === 1) {
-        showQuestion2()
-    } else if (question_number === 2){
-        showQuestion3()
-    } else if (question_number === 3){
-        showQuestion4()
-    } else if (question_number === 4){
-        showQuestion5()
-    }
-})
+
+
 
 //questions array
 
@@ -76,5 +70,27 @@ const questions_array = [
         {text: '75"'},
         {text: '85"'},
     ]
-    }
+    },
+    {question: 'What price TV are you looking to buy?',
+    buttonElements: [
+        {text:"£500-£650"},
+        {text:"£651-£800"},
+        {text:"£800-£1100"},
+        {text:"£1100+"},
+    ]
+    },
+    {question: 'How many windows in the room?',
+    buttonElements: [
+        {text: '1'},
+        {text:'2'},
+        {text:'3'},
+        {text:'3+'},
+    ]
+    },
+    {question: 'Is there sun glare?',
+    buttonElements: [
+        {text:'yes'},
+        {text:'no'},
+    ]
+    },
 ]
