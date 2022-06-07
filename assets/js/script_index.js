@@ -163,6 +163,35 @@ function evalQuestion2(answer) {
     console.log(userStats['OLED']);
 }
 
+function evalQuestion3(answer) {
+    console.log("very nice")
+    console.log(answer)
+    switch (answer) {
+        case 'Movies/Series':
+            userStats['OLED'] +=1;
+            resetState()
+            questionArray()
+            break;
+        case 'Sports':
+            userStats['QLED'] +=1;
+            resetState()
+            questionArray()
+            break;
+        case 'Gaming':
+            userStats['OLED'] +=1;
+            resetState()
+            questionArray()
+            break;
+        case 'Cable TV':
+            userStats['QLED'] +=1;
+            resetState()
+            questionArray()
+            break;
+        default:
+            break;
+    }
+    console.log(userStats['price']);
+}
 
 //reset state
 function resetState() {
