@@ -29,30 +29,57 @@ function questionArray(answer) {
         answer = answer_one;
         questionName.innerText = "Question 1";
         question.innerText = some_questions[0];
+        for (let key in answer){
+            createButton(answer[key]);
+        }
     } else if (questionNumber === 1) {
         answer = answer_two;
         questionName.innerText = "Question 2";
         question.innerText = some_questions[1];
+        for (let key in answer){
+            createButton(answer[key]);
+        }
     } else if (questionNumber === 2) {
         answer = answer_three;
         questionName.innerText = "Question 3";
         question.innerText = some_questions[2];
+        for (let key in answer){
+            createButton(answer[key]);
+        }
     } else if (questionNumber === 3) {
         answer = answer_four;
         questionName.innerText = "Question 4";
         question.innerText = some_questions[3];
-    }
-    for (let key in answer){
-        createButton(answer[key]);
-    }
+        for (let key in answer){
+            createButton(answer[key]);
+        }
+    } 
     
     questionNumber++
+    console.log('question number:' + questionNumber);
 }
+
+//results screen
+function resultsScreen() {
+    questionName.innerText = "Results";
+    let div = document.createElement('div');
+    div.classList.add('row', 'p-1');
+    let result = document.createElement('p');
+    result.innerText = 'sizing:' + userStats['sizing'];
+    let result1 = document.createElement('p');
+    result1.innerText = 'price:' + userStats['price'];
+    let result2 = document.createElement('p');
+    result2.innerText = 'OLED:' + userStats['OLED'];
+    let result3 = document.createElement('p');
+    result3.innerText = 'QLED:' + userStats['QLED'];
+
+}
+
 //create button function
 function createButton(innerTxt) {
    let div = document.createElement('div');
    div.classList.add('row', 'p-1');
-   const button = document.createElement('button');
+   let button = document.createElement('button');
    button.classList.add('btn', 'quiz_btn');
    button.innerText = innerTxt
    button.setAttribute("onclick", "evalQuestion"+questionNumber+"(this.value)");
@@ -61,6 +88,7 @@ function createButton(innerTxt) {
    answerButtons.appendChild(div)
 }
 
+//question switches
 function evalQuestion0(answer) {
     console.log("very nice")
     console.log(answer)
@@ -170,28 +198,30 @@ function evalQuestion3(answer) {
         case 'Movies/Series':
             userStats['OLED'] +=1;
             resetState()
-            questionArray()
+            resultsScreen()
             break;
         case 'Sports':
             userStats['QLED'] +=1;
             resetState()
-            questionArray()
+            resultsScreen()
             break;
         case 'Gaming':
             userStats['OLED'] +=1;
             resetState()
-            questionArray()
+            resultsScreen()
             break;
         case 'Cable TV':
             userStats['QLED'] +=1;
             resetState()
-            questionArray()
+            resultsScreen()
             break;
         default:
             break;
     }
     console.log(userStats['price']);
 }
+//end question switches
+
 
 //reset state
 function resetState() {
