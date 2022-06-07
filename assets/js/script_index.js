@@ -68,16 +68,17 @@ function resetState() {
 
 
 //questions array
-const some_questions = ['What size TV do you need?', 
-'What price TV are you looking to buy?', 
-'How many windows in the room?', 
-'Is there sun glare?',]
+const some_questions = ['How far away do you sit from your TV?', 
+'How much TV do you watch?',  
+'How bright is the room?',
+'What content do you watch?',
+]
 
 //answer
-const answer_one = {"a": '43"', "b": '50"', "c": '55"', "d": '65"', "e": '75"', "f": '85"',}
-const answer_two = {"a": "£500-£650", "b": "£651-£800", "c": "£800-£1100", "d": "£1100+",}
-const answer_three = {"a": "1", "b": "2", "c": "3", "d": "3+",}
-const answer_four = {"a": 'yes', "b": 'no',}
+const answer_one = {"a": '1 ft', "b": '2 ft', "c": '3 ft', "d": '4 ft', "e": '4 ft+',}
+const answer_two = {"a": "Once a week", "b": "Three times a week", "c": "Five times a week", "d": "Seven times a week",}
+const answer_three = {"a": 'No light', "b": 'Little light', "c": 'Medium light', "d": 'Lots of light', "e": 'The sun'}
+const answer_four = {"a": 'Movies/Series', "b": 'Sports', "c": 'Gaming', "d": 'Cable TV',}
 
 const questions_array = [
     {question: 'What size TV do you need?',
