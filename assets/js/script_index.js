@@ -5,12 +5,11 @@ const questionName = document.getElementById('question_name')
 const question = document.getElementById('question')
 const answerButtons = document.getElementById('answer_buttons')
 
-let userStats = [
-        0, //size 1-6
-        0, //price 1-5
-        0, //OLED
-        0, //QLED
-]
+let userStats = {       'sizing': 0, //size 1-6
+'price': 0, //price 1-5
+'OLED': 0, //OLED
+'QLED': 0, //QLED
+}
 
 //functions
 
@@ -32,10 +31,16 @@ function questionArray(answer) {
         question.innerText = some_questions[0];
     } else if (questionNumber === 1) {
         answer = answer_two;
+        questionName.innerText = "Question 2";
+        question.innerText = some_questions[1];
     } else if (questionNumber === 2) {
         answer = answer_three;
+        questionName.innerText = "Question 3";
+        question.innerText = some_questions[2];
     } else if (questionNumber === 3) {
         answer = answer_four;
+        questionName.innerText = "Question 4";
+        question.innerText = some_questions[3];
     }
     for (let key in answer){
         createButton(answer[key]);
@@ -50,10 +55,62 @@ function createButton(innerTxt) {
    const button = document.createElement('button');
    button.classList.add('btn', 'quiz_btn');
    button.innerText = innerTxt
+   button.setAttribute("onclick", "evalQuestion"+questionNumber+"(this.value)");
+   button.setAttribute("value", innerTxt);
    div.appendChild(button)
    answerButtons.appendChild(div)
-   
 }
+
+function evalQuestion0(answer) {
+    console.log("very nice")
+    console.log(answer)
+    switch (answer) {
+        case "1 ft":
+            userStats['sizing'] +=1;
+            resetState()
+            questionArray()
+            break;
+        case "2 ft":
+            userStats['sizing'] +=2;
+            resetState()
+            questionArray()
+            break;
+        case "3 ft":
+            userStats['sizing'] +=3;
+            resetState()
+            questionArray()
+            break;
+        case "4 ft":
+            userStats['sizing'] +=4;
+            resetState()
+            questionArray()
+            break;
+        case "4 ft+":
+            userStats['sizing'] +=5;
+            resetState()
+            questionArray()
+            break;
+        default:
+            break;
+    }
+    console.log(userStats['sizing']);
+}
+
+function evalQuestion1(answer) {
+    console.log("very nice")
+    console.log(answer)
+    switch (answer) {
+        case "Once a week":
+            userStats['sizing'] ++;
+            resetState()
+            questionArray()
+            break;
+        default:
+            break;
+    }
+    console.log(userStats['sizing']);
+}
+
 
 
 //reset state
@@ -80,37 +137,5 @@ const answer_two = {"a": "Once a week", "b": "Three times a week", "c": "Five ti
 const answer_three = {"a": 'No light', "b": 'Little light', "c": 'Medium light', "d": 'Lots of light', "e": 'The sun'}
 const answer_four = {"a": 'Movies/Series', "b": 'Sports', "c": 'Gaming', "d": 'Cable TV',}
 
-const questions_array = [
-    {question: 'What size TV do you need?',
-    buttonElements: [
-        {text: '43"'},
-        {text: '50"'},
-        {text: '55"'},
-        {text: '65"'},
-        {text: '75"'},
-        {text: '85"'},
-    ]
-    },
-    {question: 'What price TV are you looking to buy?',
-    buttonElements: [
-        {text:"£500-£650"},
-        {text:"£651-£800"},
-        {text:"£800-£1100"},
-        {text:"£1100+"},
-    ]
-    },
-    {question: 'How many windows in the room?',
-    buttonElements: [
-        {text: '1'},
-        {text:'2'},
-        {text:'3'},
-        {text:'3+'},
-    ]
-    },
-    {question: 'Is there sun glare?',
-    buttonElements: [
-        {text:'yes'},
-        {text:'no'},
-    ]
-    },
-]
+
+
