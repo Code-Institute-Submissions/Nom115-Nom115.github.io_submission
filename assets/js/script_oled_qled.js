@@ -46,10 +46,10 @@ function qled_page_counter_positive() {
     qled_counter++;
     console.log(qled_counter)
     if (qled_counter == 1) {
-        document.getElementById("qled_page").innerHTML = "test";
+        document.getElementById("qled_page").innerHTML = "The pros of QLED are super high peak brightness, great value for money and bright, vibrant colours. The super high peak brightness is purely due to the LED backlight, a relatively old technology that has been enhanced by Quantum Dots, this old tech, allows for the manufacturing costs to be lower.";
         console.log("success")
     } else if (qled_counter == 2) {
-        document.getElementById("qled_page").innerHTML = "test2";
+        document.getElementById("qled_page").innerHTML = "The cons of the QLED are haloing, due to the nature of LED backlights, there is not enough 'dimming zones' to create a sharp image without bleed, this then causes what is known as haloing around high contrast objects within the image. Imagine white text on a black background, without the use of OLED there will be light bleed.";
     } else if (qled_counter > 2){
         qled_counter = 2;
     }
@@ -62,9 +62,9 @@ function qled_page_counter_negative() {
         document.getElementById("qled_page").innerHTML = "The QLED, manufacted by Samsung displays, is known to be the brightest LED backlit panel for consumers. The LED screen powered by Quantum Dots, allow for 64 times as many colors as a standard LED screen, with far better viewing angles. With the high peak brightness, and some Samsung magic, these TV screens compete with OLEDs comfortably.";
         console.log("success")
     } else if (qled_counter == 1) {
-        document.getElementById("qled_page").innerHTML = "test";
+        document.getElementById("qled_page").innerHTML = "The pros of QLED are super high peak brightness, great value for money and bright, vibrant colours. The super high peak brightness is purely due to the LED backlight, a relatively old technology that has been enhanced by Quantum Dots, this old tech, allows for the manufacturing costs to be lower.";
     } else if (qled_counter == 2){
-        document.getElementById("qled_page").innerHTML = "test2";
+        document.getElementById("qled_page").innerHTML = "The cons of the QLED are haloing, due to the nature of LED backlights, there is not enough 'dimming zones' to create a sharp image without bleed, this then causes what is known as haloing around high contrast objects within the image. Imagine white text on a black background, without the use of OLED there will be light bleed.";
     } else if (qled_counter < 0){
         qled_counter = 0;
     }
