@@ -62,16 +62,22 @@ function questionArray(answer) {
 //results screen
 function resultsScreen() {
     questionName.innerText = "Results";
+    question.innerText = "What TV should you buy?"
     let div = document.createElement('div');
     div.classList.add('row', 'p-1');
     let result = document.createElement('p');
-    result.innerText = 'sizing:' + userStats['sizing'];
+    result.innerText = 'Sizing:' + userStats['sizing'];
+    div.appendChild(result)
     let result1 = document.createElement('p');
-    result1.innerText = 'price:' + userStats['price'];
+    result1.innerText = 'Price:' + userStats['price'];
+    div.appendChild(result1)
     let result2 = document.createElement('p');
     result2.innerText = 'OLED:' + userStats['OLED'];
+    div.appendChild(result2)
     let result3 = document.createElement('p');
     result3.innerText = 'QLED:' + userStats['QLED'];
+    div.appendChild(result3)
+    answerButtons.appendChild(div)
 
 }
 
