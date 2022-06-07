@@ -62,23 +62,25 @@ function questionArray(answer) {
 //results screen
 function resultsScreen() {
     questionName.innerText = "Results";
-    question.innerText = "What TV should you buy?"
-    let div = document.createElement('div');
-    div.classList.add('row', 'p-1');
-    let result = document.createElement('p');
-    result.innerText = 'Sizing:' + userStats['sizing'];
-    div.appendChild(result)
-    let result1 = document.createElement('p');
-    result1.innerText = 'Price:' + userStats['price'];
-    div.appendChild(result1)
-    let result2 = document.createElement('p');
-    result2.innerText = 'OLED:' + userStats['OLED'];
-    div.appendChild(result2)
-    let result3 = document.createElement('p');
-    result3.innerText = 'QLED:' + userStats['QLED'];
-    div.appendChild(result3)
-    answerButtons.appendChild(div)
+    question.innerText = "What TV should you buy?";
 
+    let div2 = document.createElement('div');
+    div2.classList.add('row', 'p-1');
+    let recommend = document.createElement('p');
+    recommend.classList.add('header_text');
+    if (userStats['OLED'] >= 2) {
+        recommend.innerText = 'We recommend an LG C1';
+    } else if (userStats['OLED'] >= 3) {
+        recommend.innerText = 'We recommend a Sony A90J';
+    } else if (userStats['OLED'] && userStats['QLED'] >= 1) {
+        recommend.innerText = 'We recommend either an LG C1 or a Samsung QN94A';
+    } else if (userStats['QLED'] >= 2) {
+        recommend.innerText = 'We recommend a Samsung QN94A';
+    } else if (userStats['QLED'] >= 3) {
+        recommend.innerText = 'We recommend a Samsung QN900A';
+    }
+    div2.appendChild(recommend)
+    answerButtons.appendChild(div2)
 }
 
 //create button function
