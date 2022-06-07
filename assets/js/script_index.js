@@ -126,6 +126,42 @@ function evalQuestion1(answer) {
     console.log(userStats['price']);
 }
 
+function evalQuestion2(answer) {
+    console.log("very nice")
+    console.log(answer)
+    switch (answer) {
+        case 'No light':
+            userStats['OLED'] +=2;
+            resetState()
+            questionArray()
+            break;
+        case 'Little light':
+            userStats['OLED'] +=1;
+            resetState()
+            questionArray()
+            break;
+        case 'Medium light':
+            userStats['OLED'] +=1;
+            userStats['QLED'] +=1;
+            resetState()
+            questionArray()
+            break;
+        case 'Lots of light':
+            userStats['QLED'] +=1;
+            resetState()
+            questionArray()
+            break;
+        case 'The sun':
+            userStats['QLED'] +=2;
+            resetState()
+            questionArray()
+            break;
+        default:
+            break;
+    }
+    console.log(userStats['QLED']);
+    console.log(userStats['OLED']);
+}
 
 
 //reset state
