@@ -101,14 +101,29 @@ function evalQuestion1(answer) {
     console.log(answer)
     switch (answer) {
         case "Once a week":
-            userStats['sizing'] ++;
+            userStats['price'] +=1;
+            resetState()
+            questionArray()
+            break;
+        case "Three times a week":
+            userStats['price'] +=2;
+            resetState()
+            questionArray()
+            break;
+        case "Five times a week":
+            userStats['price'] +=3;
+            resetState()
+            questionArray()
+            break;
+        case "Seven times a week":
+            userStats['price'] +=4;
             resetState()
             questionArray()
             break;
         default:
             break;
     }
-    console.log(userStats['sizing']);
+    console.log(userStats['price']);
 }
 
 
