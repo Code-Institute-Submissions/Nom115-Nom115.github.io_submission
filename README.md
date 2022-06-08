@@ -83,6 +83,5 @@ The live link can be found here - http://34.73.3.134/what-tv-do-you-need/index.h
 
 ### Media
 
- - Media
-    - [QN94A picture](https://www.samsung.com/uk/tvs/qled-tv/qn90a-50-inch-neo-qled-4k-smart-tv-qe50qn90aatxxu/) - Taken from Samsung.com
-    - [LG C1 picture](https://www.lg.com/uk/tvs/lg-oled65c14lb) - Taken from LG.com
+ - [QN94A picture](https://www.samsung.com/uk/tvs/qled-tv/qn90a-50-inch-neo-qled-4k-smart-tv-qe50qn90aatxxu/) - Taken from Samsung.com
+ - [LG C1 picture](https://www.lg.com/uk/tvs/lg-oled65c14lb) - Taken from LG.com
