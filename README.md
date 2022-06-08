@@ -1,108 +1,88 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# What TV should you buy? (2021 edition)
 
-Welcome Nom115,
+What TV should you buy? (2021 edition), is aimed at people who are looking to buy a TV and are having trouble navigating around the OLED vs QLED battle. This quiz hopes to simplify the process by asking a few questions and giving very straight answers. This is mainly targeted at people who are either tech illiterate, or know very little in regards to TV tech. Not only does the quiz aid in choosing the TV, but also has handy descriptions of what each technology does.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Features 
+There are many features within this site, the main one being the quiz, I shall go through the many features below.
+### Existing Features
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+- __The Nav Bar__
 
-## Gitpod Reminders
+  - Stuck to the top of each page, the nav bar allows for easy navigation across the site, with very little trouble. Hamburger menu included for mobile, and is fully responsive, with hover over text.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+![Nav Bar](assets/imgs/nav_bar.png)
 
-`python3 -m http.server`
+- __The Quiz__
 
-A blue button should appear to click: _Make Public_,
+  - This section allows the user to play an interactive quiz to find out which TV they need.
+  - By clicking on the answers, the user's input is recorded and stored in an array, to give a more accurate TV recommendation. 
 
-Another blue button should appear to click: _Open Browser_.
+![Quiz](assets/imgs/the_quiz.png)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- __The Interactive Table__
 
-A blue button should appear to click: _Make Public_,
+  - The interactive table includes the manufacturer, the Model number, the RRP and an Amazon link. 
+  - Using Tabulator, the entire table is completely interactive and sortable.
 
-Another blue button should appear to click: _Open Browser_.
+![Table](assets/imgs/table.png)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- __OLED vs QLED__
 
-To log into the Heroku toolbelt CLI:
+  - The OLED vs QLED page displays both, OLED and QLED, and gives the pros and cons in the form of cards on the screen. The user can scroll forward and back between the cards and read as they go along. 
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+![Cards](assets/imgs/cards.png)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+Additional features that I would implement would be:
+ - 2022 models
+ - Better accuracy of model recommendation
+ - More questions on quiz
 
-------
+### Features Left to Implement
 
-## Release History
+- TV newsfeed displaying all new advancements in the TV industry, that is live updating from Twitter, showing anything from Samsung Displays, or LG Displays etc.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Testing 
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+In regards to testing, having multiple people complete the quiz, and then further trying every combination myself, allowed to validate the quiz as BUGFREE. The table has also been thoroughly tested with the only problem so far being resizing of the columns with no way to reset other than a page refresh (F5). In regards to the OLED vs QLED cards, the testing was done mainly with console.log() functions, detailing exactly what the site is doing so as to know where problems may have arised.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### Validator Testing 
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+- HTML
+    - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=http%3A%2F%2F34.73.3.134%2Fwhat-tv-do-you-need%2F)
+- CSS
+    - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2F34.73.3.134%2Fwhat-tv-do-you-need%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- JavaScript
+    - No errors were found when passing through the official [Jshint validator](https://jshint.com/)
+      - The following metrics were returned: 
+      - There are 17 functions in this file.
+      - Function with the largest signature take 1 arguments, while the median is 0.
+      - Largest function has 23 statements in it, while the median is 4.
+      - The most complex function has a cyclomatic complexity value of 9 while the median is 4.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+### Unfixed Bugs
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+No unfixed bugs.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+## Deployment
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+- The site was deployed to Google Cloud Platform. The steps to deploy are as follows: 
+  - Create a Virtual Machine
+  - Install NGINX on VM
+  - Using Linux command prompt, install and upload files to server, allowing for reading and display of content 
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+The live link can be found here - http://34.73.3.134/what-tv-do-you-need/index.html
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+## Credits 
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Content 
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+ - [Tabulator](http://tabulator.info/) - Tabulator allowed for fully featured, interactive JavaScript tables.
+ - [Bootstrap](https://getbootstrap.com/) - Bootstrap allowed for easy styling, and easy responsiveness. 
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Media
 
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+ - Media
+    - [QN94A picture](https://www.samsung.com/uk/tvs/qled-tv/qn90a-50-inch-neo-qled-4k-smart-tv-qe50qn90aatxxu/) - Taken from Samsung.com
+    - [LG C1 picture](https://www.lg.com/uk/tvs/lg-oled65c14lb) - Taken from LG.com
